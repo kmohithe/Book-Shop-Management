@@ -1,10 +1,10 @@
+    
 package main;
 import java.util.ArrayList;
 import java.util.List;
 
 import main.Bill;
 import main.Item;
-
 public class Cart extends Bill{
     //one cart one bill
     public List<Item> inCart = new ArrayList<Item>();
@@ -14,6 +14,7 @@ public class Cart extends Bill{
       //write your code here
       //------------
       //------------
+    	 noOfItems++;
     	inCart.add(a);
     	quant.add(q);
    
@@ -32,6 +33,9 @@ public class Cart extends Bill{
     	int total=0;
 //    	write your code here!!!
 //    	----------------------
+    	for(int i=0;i<noOfItems;i++){
+   		 total+=inCart.get(i).mrp*quant.get(i);
+        }
     	return total;
     	
     }
